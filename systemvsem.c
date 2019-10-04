@@ -26,7 +26,8 @@ int main() {
     printf("CRITICAL SECTION RUNNING\n");
     printf("Enter value of 2 numbers : \n");
     scanf("%d%d",&a,&b);
-    int c = a+b;
+    int c = 0;
+    c = a + b;
     printf("SUM = %d\n",c);
     semop(sem_id, SIGNAL, 1);
     printf("EXITING CRITICAL SECTION\n");
